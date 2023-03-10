@@ -5,7 +5,6 @@ export JAVA_HOME=/usr/lib/jvm/jdk-18
 export PATH=$JAVA_HOME/bin:$PATH
 export CC=gcc
 
-# TODO(schuyler): move aliases to their own dotfile
 alias reload='source ~/.bashrc'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
@@ -16,6 +15,7 @@ alias .....='cd ../../../../'
 alias python=python3
 alias t=terraform
 alias p=prefect
+alias ppp='poetry lock && poetry install && poetry update && poetry run pytest . && poetry run black . && poetry run mypy .'
 
 #!/bin/bash
 iatest=$(expr index "$-" i)
